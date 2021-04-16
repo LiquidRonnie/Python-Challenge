@@ -33,7 +33,7 @@ with open(csvpath, 'r') as budget_file:
         # Calculate the net total of "pprofit/losses" over the enrite preiod
         total_profit_loss = total_profit_loss + int(row[1])
 
-        # Calculate the changes in "Profit/Losses" over the entire period, then find the average of those changes
+        # Calculate the changes in "Profit/Losses" over the entire period
         profit_change.append(int(row[1]) - intial_price)
         intial_price = int(row[1])
         
@@ -47,6 +47,7 @@ with open(csvpath, 'r') as budget_file:
        
         # print anaylsis in Terminal
 
+#find the average of those changes
 del profit_change[0]
 average_change = round(sum(profit_change) / (month_count -1), 2)
 #print(profit_change)

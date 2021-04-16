@@ -55,7 +55,7 @@ for name in names:
         o_votes = o_votes + 1
         o_percent = "{:.00%}".format(o_votes / total_votes)
 
-#Create List
+# create dictionary
 candidates = {
     "Correy":c_votes,
     "Khan":k_votes,
