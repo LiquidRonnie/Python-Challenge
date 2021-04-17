@@ -37,6 +37,11 @@ with open(csvpath, 'r') as election_data:
         #store Data in list
         names.append(row[2])
 
+
+# obtain names from list
+unique_candidate = []
+[unique_candidate.append(name) for name in names if name not in unique_candidate]
+
 #being loop
 # obtain The percentage of votes each candidate won  
 # obtain names in list and get count for each through loop
@@ -55,7 +60,7 @@ for name in names:
         o_votes = o_votes + 1
         o_percent = "{:.00%}".format(o_votes / total_votes)
 
-# create dictionary
+#Create List
 candidates = {
     "Correy":c_votes,
     "Khan":k_votes,
